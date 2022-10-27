@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div >demo1</div>
+  <div id="app"></div>
+  <script type="module">
+    import {createApp} from 'vue/dist/vue.esm-bundler.js'
+    import ziYuUi,{SFCButton,ZiYuButton,JSXButton} from "../../dist/ziYu-ui.mjs";
+    createApp({
+      template:`
+      <ZiYuButton/>
+      <JSXButton/>
+      <SFCButton/>
+      `
+    }).component(SFCButton.name, SFCButton)
+    .component(JSXButton.name, JSXButton)
+    .component(ZiYuButton.name, ZiYuButton)
+    .mount('#app')
+  </script>
+</body>
+</html>

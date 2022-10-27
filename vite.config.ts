@@ -1,0 +1,33 @@
+import { defineConfig } from "vite";
+// 单纯的vue3.0的包是不支持sfc语法的，这个过程需要编译，也就是plugin的目的
+import vue from "@vitejs/plugin-vue";
+// Jsx也同样默认不支持需要plugin进行解析处理位template
+import vueJsx from "@vitejs/plugin-vue-jsx";
+
+// rollup 打包配置
+const rollupOptions = {
+  external: ["vue", "vue-router"],
+  output: {
+    globals: {
+      vue: "Vue",
+    },
+  },
+};
+
+export default defineConfig({
+  plugins: [vue(), vueJsx()],
+
+  // 添加库模式配置
+
+  build: {
+    rollupOptions,
+    minify: false,
+    lib: {
+      entry: "./src/entry.ts",
+      name: "ZiYuUI",
+      fileName: "ziYu-ui",
+      // 导出模块格式
+      formats: ["es", "umd", "iife"],
+    },
+  },
+});
