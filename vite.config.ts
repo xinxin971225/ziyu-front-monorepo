@@ -3,6 +3,7 @@ import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 // Jsx也同样默认不支持需要plugin进行解析处理位template
 import vueJsx from "@vitejs/plugin-vue-jsx";
+import useUnoCss from "./config/unocss";
 
 // rollup 打包配置
 const rollupOptions = {
@@ -15,7 +16,7 @@ const rollupOptions = {
 };
 
 export default defineConfig({
-  plugins: [vue(), vueJsx()],
+  plugins: [vue(), vueJsx(), useUnoCss()],
 
   // 添加库模式配置
 
