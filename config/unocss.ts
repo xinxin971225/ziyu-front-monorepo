@@ -14,6 +14,17 @@ const colorsSafeList: string[] = [
   "pink",
 ];
 
+const iconBaselineSafelist: string[] = [
+  "search",
+  "edit",
+  "check",
+  "message",
+  "star-off",
+  "delete",
+  "add",
+  "share",
+].map((v) => `i-ic-baseline-${v}`);
+
 const safelist = [
   ...colorsSafeList
     .map((color) => [
@@ -31,10 +42,15 @@ const safelist = [
       `hover:border-${color}-400`,
     ])
     .flat(),
+  ...iconBaselineSafelist,
 ];
 
 export default () =>
   UnoCss({
     safelist,
-    presets: [presetUno(), presetAttributify(), presetIcons()],
+    presets: [
+      presetUno(),
+      presetAttributify(),
+      presetIcons() /** 添加图标预设 查找链接 https://icones.js.org/ */,
+    ],
   });

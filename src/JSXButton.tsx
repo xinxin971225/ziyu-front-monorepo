@@ -9,6 +9,10 @@ export const props = {
   plain:{
     type:Boolean,
     default:false
+  },
+  icon:{
+    type:String,
+    default:""
   }
 }
 
@@ -29,6 +33,7 @@ export default defineComponent({
     cursor-pointer 
     `}
       > 
+      {props.icon!==""?<i class={`i-ic-baseline-${props.icon} p-3`}></i> : ""}
       {slots.default ? slots.default() : ''}
    </button>
   }
