@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="styleSheet" href="../../dist/style.css">
   <title>Document</title>
 </head>
 <body>
@@ -11,12 +12,16 @@
   <div id="app"></div>
   <script type="module">
     import {createApp} from 'vue/dist/vue.esm-bundler.js'
-    import ziYuUi,{SFCButton,ZiYuButton,JSXButton} from "../../dist/ziYu-ui.mjs";
+    import ziYuUi,{SFCButton,ZiYuButton,JSXButton} from "../../dist/ziYu-vite-ui.mjs";
     createApp({
       template:`
-      <ZiYuButton/>
-      <JSXButton/>
-      <SFCButton/>
+      <JSXButton color="blue" >JSXButton</JSXButton>
+  <JSXButton color="green" >JSXButton</JSXButton>
+  <JSXButton color="red" plain>JSXButton</JSXButton>
+  <JSXButton color="gray" plain>JSXButton</JSXButton>
+  <JSXButton color="yellow" icon="search"></JSXButton>
+  <SFCButton>SFCButton</SFCButton>
+  <ziYuButton>ziYuButton</ziYuButton>
       `
     }).component(SFCButton.name, SFCButton)
     .component(JSXButton.name, JSXButton)

@@ -12,6 +12,7 @@ const rollupOptions = {
     globals: {
       vue: "Vue",
     },
+    assetFileNames: "style.css", //https://rollupjs.org/guide/en/#outputassetfilenames
   },
 };
 
@@ -22,11 +23,11 @@ export default defineConfig({
 
   build: {
     rollupOptions,
+    cssCodeSplit: true,
     minify: false,
     lib: {
       entry: "./src/entry.ts",
       name: "ZiYuUI",
-      fileName: "ziYu-ui",
       // 导出模块格式
       formats: ["es", "umd", "iife"],
     },
