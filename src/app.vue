@@ -9,7 +9,7 @@
 </template>
 
 <script setup lang="ts">
-import JSXButton from "./JSXButton";
-import SFCButton from "./SFCButton.vue";
+import JSXButton from "./button/JSXButton";
+import SFCButton from "./button/SFCButton.vue";
 import ziYuButton from "./button";
 </script>
