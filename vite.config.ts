@@ -1,3 +1,5 @@
+/// <reference types="vitest" />
+
 import { defineConfig } from "vite";
 // 单纯的vue3.0的包是不支持sfc语法的，这个过程需要编译，也就是plugin的目的
 import vue from "@vitejs/plugin-vue";
@@ -18,6 +20,18 @@ const rollupOptions = {
 
 export default defineConfig({
   plugins: [vue(), vueJsx(), useUnoCss()],
+  //测试
+  test: {
+    // enable jest-like global test APIs
+    globals: true,
+    // simulate DOM with happy-dom
+    // (requires installing happy-dom as a peer dependency)
+    environment: "happy-dom",
+    // 支持tsx组件，很关键
+    transformMode: {
+      web: [/\.[tj]sx$/],
+    },
+  },
 
   // 添加库模式配置
 
