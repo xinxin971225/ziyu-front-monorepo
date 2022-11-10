@@ -1,0 +1,144 @@
+{
+  "script": {
+    "scope": "vue",
+    "prefix": "script",
+    "body": ["<script>", "export default {", "\tname: '${0}'", "}", "</script>"],
+    "description": "<script>"
+  },
+  "template": {
+    "scope": "vue",
+    "prefix": "template",
+    "body": ["<template>", "\t${0}", "</template>"],
+    "description": "<template>"
+  },
+  "style": {
+    "scope": "vue",
+    "prefix": "style",
+    "body": ["<style lang=\"scss\" scoped>", "${0}", "</style>"],
+    "description": "<style lang=\"scss\" scoped>"
+  },
+  "test": {
+    "prefix": "test",
+    "body": [
+      "import { test, assert } from 'vitest'",
+      "import { } from '../index'",
+      "test('${0}', () => {",
+      "\tassert.equal()",
+      "})"
+    ],
+    "description": "Unit test block"
+  },
+  "inSourceTest": {
+    "prefix": "inSourceTest",
+    "body": [
+      "if (import.meta.vitest) {",
+      "\tconst { it, expect } = import.meta.vitest",
+      "\tit('${0}', () => {",
+      "\t\texpect().toBe()",
+      "\t})",
+      "}"
+    ],
+    "description": "inSourceTest吊吊的单测"
+  },
+  "ts-ignore": {
+    "prefix": "ts-ignore",
+    "body": ["// @ts-ignore"],
+    "description": "@ts-ignore"
+  },
+  "setup": {
+    "prefix": "setup",
+    "body": ["setup(){", "\treturn () => h('${0}')", "}"],
+    "description": "setup"
+  },
+  "scriptSetup": {
+    "prefix": "scriptSetup",
+    "body": ["<script setup lang=\"ts\">", "${0}", "</script>"],
+    "description": "setup"
+  },
+  "vueSetup": {
+    "prefix": "vueSetup",
+    "body": [
+      "<template>",
+      "\t<div class=\"p-4\">",
+      "\t</div>",
+      "</template>",
+      "",
+      "<script setup lang=\"ts\">",
+      "import { useComposition } from \"@bello-osr/utils\"",
+      "const { computed, ref } = useComposition()",
+      "${0}",
+      "</script>"
+    ],
+    "description": "vue setup"
+  },
+  "exListJson": {
+    "prefix": "mockJsonParserExList",
+    "body": [
+      "exList: [",
+      "\t{",
+      "\t\tuseJsonParserComp: true,",
+      "\t\tautoRun: true,",
+      "\t\tcantEditArgs: true,",
+      "\t\tprintFunc: (res) => res,",
+      "\t\tremark: '${0}',",
+      "\t\targs: [],",
+      "\t},",
+      "],"
+    ],
+    "description": "exJsonList"
+  },
+  "labMockDataJson": {
+    "prefix": "mockJsonParser-MockExList",
+    "body": [
+      "import type { MockFunc } from '@bello-osr/types'",
+      "const mock: MockFunc = {",
+      "\texList: [",
+      "\t\t{",
+      "\t\t\tuseJsonParserComp: true,",
+      "\t\t\tautoRun: true,",
+      "\t\t\tcantEditArgs: true,",
+      "\t\t\tprintFunc: (res) => res,",
+      "\t\t\tremark: '${0}',",
+      "\t\t\targs: [],",
+      "\t\t},",
+      "\t],",
+      "}",
+      "",
+      "export default mock"
+    ],
+    "description": "exJsonList"
+  },
+  "testIt": {
+    "prefix": "testIt",
+    "body": ["it('${0}', () => {", "\texpect().toBe()", "})"],
+    "description": "testIt"
+  },
+  "useCompJson": {
+    "prefix": "useCompJson",
+    "body": [
+      "import type { JsonConfig } from '@bello-osr/types'",
+      "import { useComposition, useI18nDefine } from '@bello-osr/utils'",
+      "import {} from '@bello-osr/comp-json'",
+      "",
+      "const getI18nConfig = () => ({})",
+      "type I18nType = ReturnType<typeof getI18nConfig>",
+      "",
+      "export const ${0} = () => {",
+      "\tconst { computed } = useComposition()",
+      "",
+      "\tconst { i18n: i18nRef } = useI18nDefine<I18nType>(getI18nConfig())",
+      "",
+      "\treturn computed(() => {",
+      "\t\tconst i18n = i18nRef.value",
+      "",
+      "\t\tconst config: JsonConfig = {",
+      "\t\t\tis: 'div',",
+      "\t\t}",
+      "",
+      "\t\treturn config",
+      "\t})",
+      "}"
+    ],
+    "description": "define useCompJson in ts"
+  }
+}

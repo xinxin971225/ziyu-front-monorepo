@@ -1,6 +1,6 @@
 # ZiYu-VITE-Ui
 
-一个Mini版本的组件库，基于vite，仅供学习参考
+一个 Mini 版本的组件库，基于 vite，仅供学习参考
 
 ## Features
 
@@ -10,7 +10,8 @@
 - EsLint + Prettier
 - CI/CD
 
-# Button 按钮
+## Button 按钮
+
 <div style="margin-bottom:20px;">
   <JSXButton color="blue">主要按钮</JSXButton>
   <JSXButton color="green">绿色按钮</JSXButton>

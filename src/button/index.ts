@@ -1,13 +1,13 @@
-import { defineComponent, h } from "vue";
+import { defineComponent, h } from 'vue'
 export default defineComponent({
-  name: "ZiYuButton",
+  name: 'ZiYuButton',
   render() {
     return h(
-      "button",
+      'button',
       {
-        class: "border-red-500",
+        class: 'border-red-500',
       },
-      "ziyuButton"
-    );
+      'ziyuButton',
+    )
   },
-});
+})
