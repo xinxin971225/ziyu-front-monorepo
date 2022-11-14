@@ -37,8 +37,9 @@ export default defineConfig({
 
   build: {
     rollupOptions,
+    minify: 'terser', // boolean | 'terser' | 'esbuild'
+    sourcemap: true, // 输出单独 source文件
     cssCodeSplit: true,
-    minify: false,
     lib: {
       entry: './src/entry.ts',
       name: 'ZiYuUI',

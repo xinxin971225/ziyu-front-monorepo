@@ -25,6 +25,7 @@ specifiers:
   stylelint-config-recommended-vue: ^1.4.0
   stylelint-config-standard: ^29.0.0
   stylelint-order: ^5.0.0
+  terser: ^5.15.1
   typescript: ^4.8.4
   unocss: ^0.46.1
   vite: ^3.2.0
@@ -61,12 +62,13 @@ devDependencies:
   stylelint-config-recommended-vue: 1.4.0_a4i6jbpfaxelx4fvjhtlgvxx6i
   stylelint-config-standard: 29.0.0_stylelint@14.14.1
   stylelint-order: 5.0.0_stylelint@14.14.1
+  terser: 5.15.1
   typescript: 4.8.4
   unocss: 0.46.1_vite@3.2.0
-  vite: 3.2.0
-  vitepress: 1.0.0-alpha.8
+  vite: 3.2.0_terser@5.15.1
+  vitepress: 1.0.0-alpha.8_terser@5.15.1
   vitepress-theme-demoblock: 1.4.2
-  vitest: 0.25.0_happy-dom@7.6.6
+  vitest: 0.25.0_pmcz6punybwxqehzvjh77d2xlq
 
 packages:
 
@@ -850,6 +852,13 @@ packages:
     engines: {node: '>=6.0.0'}
     dev: true
 
+  /@jridgewell/source-map/0.3.2:
+    resolution: {integrity: sha512-m7O9o2uR8k2ObDysZYzdfhb08VuEml5oWGiosa1VdaPZ/A6QyPkAJuwN0Q1lhULOf6B7MtQmHENS743hWtCrgw==}
+    dependencies:
+      '@jridgewell/gen-mapping': 0.3.2
+      '@jridgewell/trace-mapping': 0.3.17
+    dev: true
+
   /@jridgewell/sourcemap-codec/1.4.14:
     resolution: {integrity: sha512-XPSJHWmi394fuUuzDnGz1wiKqWfo1yXecHQMRf2l6hztTO+nPru658AyDngaBe7isIxEkRsPR3FZh+s7iVa4Uw==}
     dev: true
@@ -1295,7 +1304,7 @@ packages:
       '@unocss/scope': 0.46.1
       '@unocss/transformer-directives': 0.46.1
       magic-string: 0.26.7
-      vite: 3.2.0
+      vite: 3.2.0_terser@5.15.1
     transitivePeerDependencies:
       - rollup
     dev: true
@@ -1310,7 +1319,7 @@ packages:
       '@babel/core': 7.19.6
       '@babel/plugin-transform-typescript': 7.19.3_@babel+core@7.19.6
       '@vue/babel-plugin-jsx': 1.1.1_@babel+core@7.19.6
-      vite: 3.2.0
+      vite: 3.2.0_terser@5.15.1
       vue: 3.2.41
     transitivePeerDependencies:
       - supports-color
@@ -1332,7 +1341,7 @@ packages:
       vite: ^3.0.0
       vue: ^3.2.25
     dependencies:
-      vite: 3.2.0
+      vite: 3.2.0_terser@5.15.1
       vue: 3.2.41
     dev: true
 
@@ -1897,6 +1906,10 @@ packages:
     engines: {node: '>= 0.8'}
     dependencies:
       delayed-stream: 1.0.0
+    dev: true
+
+  /commander/2.20.3:
+    resolution: {integrity: sha512-GpVkmM8vF2vQUkj2LvZmD35JxeJOLCwJ9cUkugyk2nuhbv3+mJvpLYYt+0+USMxE+oj+ey/lJEnhZw75x/OMcQ==}
     dev: true
 
   /commander/9.4.1:
@@ -4557,6 +4570,13 @@ packages:
     resolution: {integrity: sha512-R0XvVJ9WusLiqTCEiGCmICCMplcCkIwwR11mOSD9CR5u+IXYdiseeEuXCVAjS54zqwkLcPNnmU4OeJ6tUrWhDw==}
     engines: {node: '>=0.10.0'}
 
+  /source-map-support/0.5.21:
+    resolution: {integrity: sha512-uBHU3L3czsIyYXKX88fdrGovxdSCoTGDRZ6SYXtSRxLZUzHg5P/66Ht6uoUlHu9EZod+inXhKo3qQgwXUT/y1w==}
+    dependencies:
+      buffer-from: 1.1.2
+      source-map: 0.6.1
+    dev: true
+
   /source-map/0.6.1:
     resolution: {integrity: sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g==}
     engines: {node: '>=0.10.0'}
@@ -4851,6 +4871,17 @@ packages:
       slice-ansi: 4.0.0
       string-width: 4.2.3
       strip-ansi: 6.0.1
+    dev: true
+
+  /terser/5.15.1:
+    resolution: {integrity: sha512-K1faMUvpm/FBxjBXud0LWVAGxmvoPbZbfTCYbSgaaYQaIXI3/TdI7a7ZGA73Zrou6Q8Zmz3oeUTsp/dj+ag2Xw==}
+    engines: {node: '>=10'}
+    hasBin: true
+    dependencies:
+      '@jridgewell/source-map': 0.3.2
+      acorn: 8.8.1
+      commander: 2.20.3
+      source-map-support: 0.5.21
     dev: true
 
   /text-extensions/1.9.0:
@@ -5161,7 +5192,7 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /vite/3.2.0:
+  /vite/3.2.0_terser@5.15.1:
     resolution: {integrity: sha512-Ovj7+cqIdM1I0LPCk2CWxzgADXMix3NLXpUT6g7P7zg/a9grk/TaC3qn9YMg7w7M0POIVCBOp1aBANJW+RH7oA==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
@@ -5187,6 +5218,7 @@ packages:
       postcss: 8.4.18
       resolve: 1.22.1
       rollup: 2.79.1
+      terser: 5.15.1
     optionalDependencies:
       fsevents: 2.3.2
     dev: true
@@ -5254,7 +5286,7 @@ packages:
       - supports-color
     dev: true
 
-  /vitepress/1.0.0-alpha.8:
+  /vitepress/1.0.0-alpha.8_terser@5.15.1:
     resolution: {integrity: sha512-kTRN5DCagvMqr9OjylSV9/waGg0IHrxL0hBVuJoz7ykleZq2qR02n5CaiFq5QrSB/VRBGqiVsFQzet9vJsXS8g==}
     hasBin: true
     dependencies:
@@ -5265,7 +5297,7 @@ packages:
       '@vueuse/core': 9.4.0_vue@3.2.41
       body-scroll-lock: 4.0.0-beta.0
       shiki: 0.11.1
-      vite: 3.2.0
+      vite: 3.2.0_terser@5.15.1
       vue: 3.2.41
     transitivePeerDependencies:
       - '@algolia/client-search'
@@ -5280,7 +5312,7 @@ packages:
       - terser
     dev: true
 
-  /vitest/0.25.0_happy-dom@7.6.6:
+  /vitest/0.25.0_pmcz6punybwxqehzvjh77d2xlq:
     resolution: {integrity: sha512-CVgBdKSeA27mowKC/C31Tx7ZBjRoyasq/yW7zoqUaCdKaOsjdzRUH5KgSL3eG36DzaaUsbnwWPUbAOtFz5k6tQ==}
     engines: {node: '>=v14.16.0'}
     hasBin: true
@@ -5316,7 +5348,7 @@ packages:
       tinybench: 2.3.1
       tinypool: 0.3.0
       tinyspy: 1.0.2
-      vite: 3.2.0
+      vite: 3.2.0_terser@5.15.1
     transitivePeerDependencies:
       - less
       - sass

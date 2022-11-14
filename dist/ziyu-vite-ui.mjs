@@ -6,8 +6,10 @@ const _export_sfc = (sfc, props2) => {
   }
   return target;
 };
-const _sfc_main = {};
-function _sfc_render(_ctx, _cache) {
+const _sfc_main = {
+  name: "SFCButton"
+};
+function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
   return openBlock(), createElementBlock("button", null, [
     renderSlot(_ctx.$slots, "default")
   ]);
@@ -35,15 +37,15 @@ const JSXButton = defineComponent({
   }) {
     return () => createVNode("button", {
       "class": `
-    py-2 
-    px-4 
-    font-semibold 
-    rounded-lg 
+    py-2
+    px-4
+    font-semibold
+    rounded-lg
     ${props2.plain ? `text-${props2.color}-500 hover:text-white ` : "text-white "}
     ${props2.plain ? ` bg-${props2.color}-100 hover:bg-${props2.color}-500 ` : ` bg-${props2.color}-500 hover:bg-${props2.color}-400 `}
     border-solid
     ${props2.plain ? `border-${props2.color}-500` : `hover:border-${props2.color}-400 border-${props2.color}-500`}
-    cursor-pointer 
+    cursor-pointer
     `
     }, [props2.icon !== "" ? createVNode("i", {
       "class": `i-ic-baseline-${props2.icon} p-3`
@@ -76,3 +78,4 @@ export {
   ZiYuButton,
   entry as default
 };
+//# sourceMappingURL=ziyu-vite-ui.mjs.map
