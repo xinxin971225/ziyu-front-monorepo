@@ -1,3 +1,7 @@
+<p align="center">
+  <a href="https://github.com/xinxin971225/ziyu-vite-ui/blob/master/.github/workflows/ci.yml"><img src="https://github.com/xinxin971225/ziyu-vite-ui/blob/master/.github/workflows/ci.yml/badge.svg?branch=master" alt="CI"></a>
+</p>
+
 # ziYu-vite-ui
 
 ## init
