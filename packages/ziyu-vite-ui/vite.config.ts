@@ -5,7 +5,18 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 // Jsx也同样默认不支持需要plugin进行解析处理位template
 import vueJsx from '@vitejs/plugin-vue-jsx'
-import useUnoCss from './config/unocss'
+import useUnoCss from '../../config/unocss'
+
+// rollup 打包配置
+const rollupOptions = {
+  external: ['vue', 'vue-router'],
+  output: {
+    globals: {
+      vue: 'Vue',
+    },
+    assetFileNames: 'style.css', //https://rollupjs.org/guide/en/#outputassetfilenames
+  },
+}
 
 export default defineConfig({
   plugins: [vue(), vueJsx(), useUnoCss()],
@@ -19,6 +30,21 @@ export default defineConfig({
     // 支持tsx组件，很关键
     transformMode: {
       web: [/\.[tj]sx$/],
+    },
+  },
+
+  // 添加库模式配置
+
+  build: {
+    rollupOptions,
+    minify: 'terser', // boolean | 'terser' | 'esbuild'
+    sourcemap: true, // 输出单独 source文件
+    cssCodeSplit: true,
+    lib: {
+      entry: './src/entry.ts',
+      name: 'ZiYuUI',
+      // 导出模块格式
+      formats: ['es', 'umd', 'iife'],
     },
   },
 })
