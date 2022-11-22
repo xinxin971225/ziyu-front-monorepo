@@ -12,7 +12,8 @@
     <script type="module">
       import style from 'ziyu-vite-ui/dist/style.css'
       import { createApp } from 'vue/dist/vue.esm-bundler.js'
-      import ziYuUi, { SFCButton, ZiYuButton, JSXButton } from 'ziyu-vite-ui/dist/ziYu-vite-ui.mjs'
+      import ziYuUi, { SFCButton, JSXButton } from 'ziyu-vite-ui/dist/ziYu-vite-ui.mjs'
+      console.log('ziYuUi', ziYuUi, SFCButton, JSXButton)
       createApp({
         template: `
       <JSXButton color="blue" >JSXButton</JSXButton>
@@ -21,12 +22,10 @@
   <JSXButton color="gray" plain>JSXButton</JSXButton>
   <JSXButton color="yellow" icon="search"></JSXButton>
   <SFCButton>SFCButton</SFCButton>
-  <ziYuButton>ziYuButton</ziYuButton>
       `,
       })
         .component(SFCButton.name, SFCButton)
         .component(JSXButton.name, JSXButton)
-        .component(ZiYuButton.name, ZiYuButton)
         .mount('#app')
     </script>
   </body>

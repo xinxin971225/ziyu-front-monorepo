@@ -6,6 +6,7 @@ import vue from '@vitejs/plugin-vue'
 // Jsx也同样默认不支持需要plugin进行解析处理位template
 import vueJsx from '@vitejs/plugin-vue-jsx'
 import useUnoCss from '../../config/unocss'
+// import commonjs from '@rollup/plugin-commonjs'
 
 // rollup 打包配置
 const rollupOptions = {
@@ -16,6 +17,7 @@ const rollupOptions = {
     },
     assetFileNames: 'style.css', //https://rollupjs.org/guide/en/#outputassetfilenames
   },
+  // plugins: [commonjs()],
 }
 
 export default defineConfig({

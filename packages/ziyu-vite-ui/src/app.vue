@@ -11,5 +11,5 @@
 <script setup lang="ts">
 import JSXButton from './button/JSXButton'
 import SFCButton from './button/SFCButton.vue'
-import ziYuButton from './button'
+import ziYuButton from './button/Button'
 </script>

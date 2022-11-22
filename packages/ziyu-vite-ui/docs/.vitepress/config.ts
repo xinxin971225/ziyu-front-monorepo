@@ -24,7 +24,7 @@ const config = {
     sidebar,
   },
   markdown: {
-    config: (md) => {
+    config: (md: any) => {
       // 添加DemoBlock插槽
       const { demoBlockPlugin } = require('vitepress-theme-demoblock')
       md.use(demoBlockPlugin)

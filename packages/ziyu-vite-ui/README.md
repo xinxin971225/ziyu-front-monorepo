@@ -12,6 +12,12 @@ vue3.x 的包并不包含对 SFC 文件的编译，需要通过 vite 插件实�
 
 组件库的使用方式可以是按需也可以是全量，所以在处理 entey 文件是也要实现两类导出形式
 
+## questionList
+
+rollup 在 monorepo 下对 export default 的读取有问题 导致打包出错
+
+尝试加入@rollup/plugin-commonjs 可以打包正常，但是无法读取打包产物
+
 ## 相关资源
 
 - [pnpm](https://pnpm.io/zh)

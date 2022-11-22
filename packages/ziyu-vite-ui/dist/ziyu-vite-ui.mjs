@@ -1,4 +1,4 @@
-import { openBlock, createElementBlock, renderSlot, defineComponent, createVNode, h } from "vue";
+import { openBlock, createElementBlock, renderSlot, defineComponent, createVNode } from "vue";
 const _export_sfc = (sfc, props2) => {
   const target = sfc.__vccOpts || sfc;
   for (const [key, val] of props2) {
@@ -52,30 +52,16 @@ const JSXButton = defineComponent({
     }, null) : "", slots.default ? slots.default() : ""]);
   }
 });
-const ZiYuButton = defineComponent({
-  name: "ZiYuButton",
-  render() {
-    return h(
-      "button",
-      {
-        class: "border-red-500"
-      },
-      "ziyuButton"
-    );
-  }
-});
 const __uno = "";
 const entry = {
   install: (app) => {
     app.component(SFCButton.name, SFCButton);
     app.component(JSXButton.name, JSXButton);
-    app.component(ZiYuButton.name, ZiYuButton);
   }
 };
 export {
   JSXButton,
   SFCButton,
-  ZiYuButton,
   entry as default
 };
 //# sourceMappingURL=ziyu-vite-ui.mjs.map

@@ -16,8 +16,12 @@
   "author": "ZIYU",
   "license": "ISC",
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^23.0.2",
     "terser": "^5.15.1",
     "vitepress": "1.0.0-alpha.8",
     "vitepress-theme-demoblock": "^1.4.2"
+  },
+  "dependencies": {
+    "vue": "^3.2.41"
   }
 }
