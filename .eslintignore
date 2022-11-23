@@ -10,3 +10,4 @@ node_modules
 dist
 
 assets
+assets/**/package.json

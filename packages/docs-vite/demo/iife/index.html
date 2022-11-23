@@ -11,12 +11,12 @@
     <div>demon1</div>
     <div id="app"></div>
     <script src="../../node_modules/vue/dist/vue.global.js"></script>
-    <script src="../../node_modules/ziyu-vite-ui/dist/ziyu-vite-ui.iife.js"></script>
+    <script src="../../node_modules/ziyu-vite-ui/assets/button/index.iife.js"></script>
     <script>
       console.log('111')
       console.log('222', Vue)
       const { createApp } = Vue
-      console.log('ziyu-vite-ui', ZiYuUI)
+      console.log('ziyu-vite-ui', button)
       // const { JSXButton, SFCButton, ZiYuButton } = ZiYuUI
 
       createApp({
@@ -26,10 +26,9 @@
         <JSXButton color="red" plain>JSXButton</JSXButton>
         <JSXButton color="gray" plain>JSXButton</JSXButton>
         <JSXButton color="yellow" icon="search"></JSXButton>
-        <SFCButton>SFCButton</SFCButton>
       `,
       })
-        .use(ZiYuUI.default)
+        .use(button.default)
         // .component(SFCButton.name, SFCButton)
         // .component(JSXButton.name, JSXButton)
         // .component(ZiYuButton.name, ZiYuButton)
