@@ -41,8 +41,8 @@ const safelist = [
   ...iconBaselineSafelist,
 ]
 
-export default () =>
-  UnoCss({
+export default () => {
+  return UnoCss({
     safelist,
     presets: [
       presetUno(),
@@ -50,3 +50,4 @@ export default () =>
       presetIcons() /** 添加图标预设 查找链接 https://icones.js.org/ */,
     ],
   })
+}

@@ -1,5 +1,6 @@
 import DefaultTheme from 'vitepress/theme'
-import ZiYuUI from '../../../src/entry'
+import ZiYuUI from 'ziyu-vite-ui'
+import 'ziyu-vite-ui/dist/style.css'
 import { App } from 'vue'
 
 // 主题样式

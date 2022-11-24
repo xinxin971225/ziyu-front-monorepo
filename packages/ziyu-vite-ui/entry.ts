@@ -1,6 +1,6 @@
 import { App } from 'vue'
-import SFCButton from './button/SFCButton.vue'
-import JSXButton from './button/JSXButton'
+import SFCButton from './src/button/SFCButton.vue'
+import JSXButton from './src/button/JSXButton'
 // import ZiYuButton from './button/Button'
 import 'uno.css'
 

@@ -6,6 +6,7 @@
   "main": "index.js",
   "scripts": {
     "dev:UI": "vite ./packages/ziyu-vite-ui",
+    "dev:UIdocs": "vitepress dev ./packages/docs-vite/docs",
     "dev:docs": "vite ./packages/docs-vite",
     "prepare": "husky install",
     "preinstall": "npx only-allow pnpm",
@@ -33,6 +34,7 @@
     "vue": "^3.2.41"
   },
   "devDependencies": {
+    "vitepress": "1.0.0-alpha.8",
     "@commitlint/cli": "^17.2.0",
     "@commitlint/config-conventional": "^17.2.0",
     "@iconify-json/ic": "^1.1.9",
