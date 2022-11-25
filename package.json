@@ -4,6 +4,7 @@
   "description": "",
   "type": "module",
   "main": "index.js",
+  "homepage": "https://ziyu-vite-ui.vercel.app/",
   "scripts": {
     "dev:UI": "vite ./packages/ziyu-vite-ui",
     "dev:UIdocs": "vitepress dev ./packages/docs-vite/docs",

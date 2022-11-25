@@ -1,10 +1,4 @@
-<p align="center">
-  <a href="https://github.com/xinxin971225/ziyu-vite-ui/actions/workflows/ci.yml"><img src="https://github.com/xinxin971225/ziyu-vite-ui/actions/workflows/ci.yml/badge.svg?branch=master" alt="CI"></a>
-</p>
-
-# ziYu-vite-ui
-
-## init
+# init
 
 通过 vite 可以快速的基于 ts 启动服务，无需额外 babel 编译，同时内置了打包功能
 
@@ -21,20 +15,3 @@ build 的入口文件一定要在根目录下，不要在 src 里面，否则不
 rollup 在 monorepo 下对 export default 的读取有问题 导致打包出错
 
 尝试加入@rollup/plugin-commonjs 可以打包正常，但是无法读取打包产物
-
-## 相关资源
-
-- [pnpm](https://pnpm.io/zh)
-- [typescript](https://www.tslang.cn/samples/index.html)
-- [prettier](https://prettier.io/)
-- [eslint](https://cn.eslint.org/)
-- [stylelint](https://stylelint.bootcss.com/)
-- [markdownlint](https://github.com/DavidAnson/markdownlint)
-- [husky](https://typicode.github.io/husky/#/)
-- [lint-staged](https://github.com/okonet/lint-staged)
-- [commitlint](https://github.com/conventional-changelog/commitlint)
-- [vite](https://cn.vitejs.dev/)
-- [docker](https://github.com/ThomasLiu/docker-learn)
-- [nginx](https://nginx.org/en/docs/)
-- [vitest](https://cn.vitest.dev/)
-- [API Extractor](https://api-extractor.com/)
