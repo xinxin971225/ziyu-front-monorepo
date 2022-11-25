@@ -10,6 +10,8 @@
     "dev:docs": "vite ./packages/docs-vite",
     "prepare": "husky install",
     "preinstall": "npx only-allow pnpm",
+    "---------serve--------": "---------------------------serve-------------------------------",
+    "serve:docs": "cd ./packages/docs-vite && pnpm docs:serve",
     "---------test--------": "---------------------------测试-------------------------------",
     "test:git": "vitest run --passWithNoTests",
     "test": "vitest",
@@ -23,6 +25,7 @@
     "lint:stylelint": "stylelint --fix",
     "--------build---------": "----------------------------构建------------------------------",
     "build:UI": "tsc && vite build ./packages/ziyu-vite-ui && pnpm run ts-clean",
+    "build:docs": "cd ./packages/docs-vite && pnpm docs:build",
     "ts-clean": "tsc --build --clean",
     "build:components": "esno ./packages/ziyu-vite-ui/scripts/build.ts"
   },
