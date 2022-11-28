@@ -4,7 +4,7 @@
 </p>
 <p align="center">
   <a href="https://github.com/xinxin971225/ziyu-vite-ui/actions/workflows/ci.yml"><img src="https://github.com/xinxin971225/ziyu-vite-ui/actions/workflows/ci.yml/badge.svg?branch=master" alt="CI"></a>
-  <a href="https://img.shields.io/github/license/xinxin971225/ziyu-vite-ui" ></a>
+  <img src="https://img.shields.io/github/license/xinxin971225/ziyu-vite-ui" />
 </p>
 
 <h1 align="center">ZiYu-vite-UI</h1>
