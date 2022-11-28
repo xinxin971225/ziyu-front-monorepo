@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/xinxin971225/ziyu-vite-ui/tree/master/assets/catdidi.jpeg" style="width:200px" />
+  <img src="https://github.com/xinxin971225/ziyu-vite-ui/blob/master/assets/catdidi.png" style="width:200px" />
 
 </p>
 <p align="center">
