@@ -5,6 +5,7 @@
 <p align="center">
   <a href="https://github.com/xinxin971225/ziyu-vite-ui/actions/workflows/ci.yml"><img src="https://github.com/xinxin971225/ziyu-vite-ui/actions/workflows/ci.yml/badge.svg?branch=master" alt="CI"></a>
   <img src="https://img.shields.io/github/license/xinxin971225/ziyu-vite-ui" />
+  <a href="https://codecov.io/gh/xinxin971225/ziyu-vite-ui" > <img src="https://codecov.io/gh/xinxin971225/ziyu-vite-ui/branch/master/graph/badge.svg?token=3MLCRCJDJB"/></a>
 </p>
 
 <h1 align="center">ZiYu-vite-UI</h1>
