@@ -9,5 +9,7 @@ Dockerfile
 node_modules
 dist
 
+coverage
+
 assets
 assets/**/package.json
