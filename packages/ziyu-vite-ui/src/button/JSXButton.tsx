@@ -1,14 +1,5 @@
 import { defineComponent, PropType } from 'vue'
-export type ButtonColor =
-  | 'black'
-  | 'gray'
-  | 'red'
-  | 'yellow'
-  | 'green'
-  | 'blue'
-  | 'indigo'
-  | 'purple'
-  | 'pink'
+import type { ButtonColor } from './types'
 
 export const props = {
   color: {
@@ -24,7 +15,6 @@ export const props = {
     default: '',
   },
 }
-
 export default defineComponent({
   name: 'JSXButton',
   props,

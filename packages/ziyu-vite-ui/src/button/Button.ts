@@ -1,14 +1,5 @@
 import { defineComponent, h, PropType } from 'vue'
-export type ButtonColor =
-  | 'black'
-  | 'gray'
-  | 'red'
-  | 'yellow'
-  | 'green'
-  | 'blue'
-  | 'indigo'
-  | 'purple'
-  | 'pink'
+import { ButtonColor } from './types'
 
 export const props = {
   color: {

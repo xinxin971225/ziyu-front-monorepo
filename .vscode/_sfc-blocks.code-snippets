@@ -59,5 +59,10 @@
     "prefix": "testIt",
     "body": ["it('${0}', () => {", "\texpect().toBe()", "})"],
     "description": "testIt"
+  },
+  "testDesc": {
+    "prefix": "testDesc",
+    "body": ["describe('${0}', () => {", "\ttest('', () => {", "\t\texpect().toBe()", "\t})", "})"],
+    "description": "testDesc"
   }
 }

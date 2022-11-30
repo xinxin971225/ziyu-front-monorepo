@@ -5,8 +5,20 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 // Jsx也同样默认不支持需要plugin进行解析处理位template
 import vueJsx from '@vitejs/plugin-vue-jsx'
+import { presetUno, presetIcons, presetAttributify } from 'unocss'
+import UnoCss from 'unocss/vite'
 export default defineConfig({
-  plugins: [vue(), vueJsx()],
+  plugins: [
+    vue(),
+    vueJsx(),
+    UnoCss({
+      presets: [
+        presetUno(),
+        presetAttributify(),
+        presetIcons() /** 添加图标预设 查找链接 https://icones.js.org/ */,
+      ],
+    }),
+  ],
   //测试
   test: {
     // enable jest-like global test APIs

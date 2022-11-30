@@ -4,7 +4,14 @@
   <JSXButton color="red" plain>JSXButton</JSXButton>
   <JSXButton color="gray" plain>JSXButton</JSXButton>
   <JSXButton color="yellow" icon="search"></JSXButton>
-  <SFCButton>SFCButton</SFCButton>
+  <div>
+    <SFCButton>SFCButton</SFCButton>
+    <SFCButton color="green">SFCButton</SFCButton>
+    <SFCButton color="gray" rounded size="small" plain>SFCButton</SFCButton>
+    <SFCButton color="red" plain size="mini">SFCButton</SFCButton>
+    <SFCButton color="yellow" size="small" icon="search"></SFCButton>
+  </div>
+
   <ziYuButton>ziYuButton</ziYuButton>
 </template>
 
