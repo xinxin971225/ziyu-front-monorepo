@@ -1,0 +1,13 @@
+{
+  "name": "create-ziyu-app-cli",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "bin": {
+    "create-ziyu": "./bin/index.js"
+  },
+  "keywords": [],
+  "author": "ZiYu",
+  "license": "ISC"
+}
