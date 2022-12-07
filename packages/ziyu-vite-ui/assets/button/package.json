@@ -1,0 +1,5 @@
+{
+        "name": "ziyu-vite-ui/button",
+        "main": "index.umd.js",
+        "module": "index.umd.js"
+      }

@@ -5,21 +5,20 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 // Jsx也同样默认不支持需要plugin进行解析处理位template
 import vueJsx from '@vitejs/plugin-vue-jsx'
-import useUnoCss from './config/unocss'
-
-// rollup 打包配置
-const rollupOptions = {
-  external: ['vue', 'vue-router'],
-  output: {
-    globals: {
-      vue: 'Vue',
-    },
-    assetFileNames: 'style.css', //https://rollupjs.org/guide/en/#outputassetfilenames
-  },
-}
-
+import { presetUno, presetIcons, presetAttributify } from 'unocss'
+import UnoCss from 'unocss/vite'
 export default defineConfig({
-  plugins: [vue(), vueJsx(), useUnoCss()],
+  plugins: [
+    vue(),
+    vueJsx(),
+    UnoCss({
+      presets: [
+        presetUno(),
+        presetAttributify(),
+        presetIcons() /** 添加图标预设 查找链接 https://icones.js.org/ */,
+      ],
+    }),
+  ],
   //测试
   test: {
     // enable jest-like global test APIs
@@ -31,20 +30,9 @@ export default defineConfig({
     transformMode: {
       web: [/\.[tj]sx$/],
     },
-  },
-
-  // 添加库模式配置
-
-  build: {
-    rollupOptions,
-    minify: 'terser', // boolean | 'terser' | 'esbuild'
-    sourcemap: true, // 输出单独 source文件
-    cssCodeSplit: true,
-    lib: {
-      entry: './src/entry.ts',
-      name: 'ZiYuUI',
-      // 导出模块格式
-      formats: ['es', 'umd', 'iife'],
+    coverage: {
+      provider: 'istanbul', // or 'c8',
+      reporter: ['text', 'json', 'html'],
     },
   },
 })

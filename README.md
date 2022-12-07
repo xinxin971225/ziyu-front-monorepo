@@ -1,16 +1,45 @@
 <p align="center">
+  <img src="https://github.com/xinxin971225/ziyu-vite-ui/blob/master/assets/catdidi.png" style="width:200px" />
+
+</p>
+<p align="center">
   <a href="https://github.com/xinxin971225/ziyu-vite-ui/actions/workflows/ci.yml"><img src="https://github.com/xinxin971225/ziyu-vite-ui/actions/workflows/ci.yml/badge.svg?branch=master" alt="CI"></a>
+  <img src="https://img.shields.io/github/license/xinxin971225/ziyu-vite-ui" />
+  <a href="https://codecov.io/gh/xinxin971225/ziyu-vite-ui" > <img src="https://codecov.io/gh/xinxin971225/ziyu-vite-ui/branch/master/graph/badge.svg?token=3MLCRCJDJB"/></a>
 </p>
 
-# ziYu-vite-ui
+<h1 align="center">ZiYu-vite-UI</h1>
 
-## init
+<p align="center">
+五脏俱全的组件库学习模型
+</p>
 
-通过 vite 可以快速的基于 ts 启动服务，无需额外 babel 编译，同时内置了打包功能
+## Features
 
-vue3.x 的包并不包含对 SFC 文件的编译，需要通过 vite 插件实现支持，jsx 也一样
+前端工程化演示项目。
 
-组件库的使用方式可以是按需也可以是全量，所以在处理 entey 文件是也要实现两类导出形式
+- 基于 Vue3 框架
+- 支持 JSX 与 Vue 单文件组件
+- vitest + Vue3 plugins 实现单元测试
+- Eslint + Prettier + Husky 语法检查
+- 采用 Rollup 构建
+- Vitepress + Vercel 文档网站搭建
+- 基于 Action CI 实现持续集成与交付
+
+## Install
+
+```
+npm i ziyu-vite-ui
+```
+
+## Quick Start
+
+```js
+import { createApp } from 'vue'
+import ZiYuUI from 'ziyu-vite-ui'
+
+createApp(yourRootNode).use(ZiYuUI).mount(yourContainerSelecter)
+```
 
 ## 相关资源
 

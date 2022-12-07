@@ -4,9 +4,11 @@ dist-ssr
 build
 node_modules
 .husky
-
+assets
+assets/**/package.json
 package-lock.json
 pnpm-lock.yaml
 tsconfig.json
 **/*.svg
+coverage
 **/*.sh

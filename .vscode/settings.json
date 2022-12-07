@@ -46,5 +46,6 @@
     "**/yarn.lock": true,
     "**/node_modules": true,
     "**/dist": true
-  }
+  },
+  "cSpell.words": ["vitepress"]
 }

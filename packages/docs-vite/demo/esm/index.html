@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>demo1</div>
+    <div id="app"></div>
+    <script type="module">
+      import style from 'ziyu-vite-ui/dist/style.css'
+      import { createApp } from 'vue/dist/vue.esm-bundler.js'
+      import ziYuUi, { SFCButton, JSXButton } from 'ziyu-vite-ui'
+      console.log('ziYuUi', ziYuUi, SFCButton, JSXButton)
+      createApp({
+        template: `
+      <JSXButton color="blue" >JSXButton</JSXButton>
+  <JSXButton color="green" >JSXButton</JSXButton>
+  <JSXButton color="red" plain>JSXButton</JSXButton>
+  <JSXButton color="gray" plain>JSXButton</JSXButton>
+  <JSXButton color="yellow" icon="search"></JSXButton>
+  <SFCButton>SFCButton</SFCButton>
+      `,
+      })
+        .component(SFCButton.name, SFCButton)
+        .component(JSXButton.name, JSXButton)
+        .mount('#app')
+    </script>
+  </body>
+</html>
