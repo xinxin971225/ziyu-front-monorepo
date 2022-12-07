@@ -1510,7 +1510,7 @@ packages:
       '@unocss/scope': 0.46.5
       '@unocss/transformer-directives': 0.46.5
       magic-string: 0.26.7
-      vite: 3.2.4
+      vite: 3.2.4_@types+node@18.11.9
     transitivePeerDependencies:
       - rollup
     dev: true
@@ -1547,7 +1547,7 @@ packages:
       vite: ^3.0.0
       vue: ^3.2.25
     dependencies:
-      vite: 3.2.4
+      vite: 3.2.4_@types+node@18.11.9
       vue: 3.2.45
     dev: true
 
