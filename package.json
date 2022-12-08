@@ -30,7 +30,7 @@
     "ts-clean": "tsc --build --clean",
     "build:components": "esno ./packages/ziyu-vite-ui/scripts/build.ts",
     "--------publish---------": "----------------------------发布------------------------------",
-    "ci:publish": "pnpm publish --filter ziyu-vite-ui --no-git-checks"
+    "ci:publish": "pnpm publish --filter=!docs-vite --no-git-checks"
   },
   "keywords": [],
   "author": "ZIYU",
