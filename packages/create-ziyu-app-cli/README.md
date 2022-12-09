@@ -1,4 +1,4 @@
-# create-ziyu-app-cli
+# create-ziyu-app
 
 ## Install
 
