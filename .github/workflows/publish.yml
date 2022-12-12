@@ -34,7 +34,7 @@ jobs:
       - name: install dependencies
         run: pnpm install
       - name: Build
-        run: pnpm run build:UI
+        run: pnpm run build:components
       - name: create and publish versions
         uses: changesets/action@v1
         with:
