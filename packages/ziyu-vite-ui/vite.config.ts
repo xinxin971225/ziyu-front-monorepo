@@ -35,7 +35,9 @@ export const buildConfig: BuildOptions = {
 export default defineConfig({
   plugins: [
     dts({
-      insertTypesEntry: true,
+      outputDir: './dist/types',
+      insertTypesEntry: false, // 插入TS 入口
+      copyDtsFiles: true, // 是否将源码里的 .d.ts 文件复制到 outputDir
       tsConfigFilePath: './tsconfig.json',
     }),
     vue(),
