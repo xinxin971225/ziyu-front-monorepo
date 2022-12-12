@@ -28,7 +28,7 @@
     "build:UI": "tsc && vite build ./packages/ziyu-vite-ui && pnpm run ts-clean",
     "build:docs": "cd ./packages/docs-vite && pnpm docs:build",
     "ts-clean": "tsc --build --clean",
-    "build:components": "esno ./packages/ziyu-vite-ui/scripts/build.ts",
+    "build:components": "cd ./packages/ziyu-vite-ui && esno ./scripts/build.ts",
     "--------publish---------": "----------------------------发布------------------------------",
     "ci:publish": "pnpm publish --filter=!docs-vite --filter=!ziyu-front --no-git-checks"
   },

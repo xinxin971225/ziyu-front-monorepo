@@ -1,9 +1,10 @@
 import fs from 'fs-extra'
 import path from 'path'
+import oldPackageJson from '../package.json'
 import { buildConfig } from '../vite.config'
 import { fileURLToPath } from 'url'
 import { build, InlineConfig, defineConfig, UserConfig } from 'vite'
-
+import { generateDTS } from './type'
 const __filename = fileURLToPath(import.meta.url)
 
 // 👇️ "/home/john/Desktop/javascript"
@@ -13,7 +14,25 @@ console.log('directory-name 👉️', __dirname)
 const buildAll = async () => {
   // 全量打包
   // await build(defineConfig(config as UserConfig) as InlineConfig)
-  const { outDir: buildConfigOutDir = 'assets' } = buildConfig
+  await build()
+  const { outDir: buildConfigOutDir = 'dist' } = buildConfig
+
+  const packageJson = JSON.parse(JSON.stringify(oldPackageJson))
+  // 复制 Package.json 文件
+  // packageJson.main = 'ziyu-vite-ui.umd.js'
+  // packageJson.module = 'ziyu-vite-ui.esm.js'
+  packageJson.types = 'ziyu-vite-ui.d.ts'
+  fs.outputFile(
+    path.resolve(buildConfigOutDir, `package.json`),
+    JSON.stringify(packageJson, null, 2),
+  )
+
+  // 拷贝 README.md文件
+  // fs.copyFileSync(path.resolve('./README.md'), path.resolve(buildConfigOutDir + '/README.md'))
+
+  // 生成配置DTS配置文件入口
+  generateDTS(path.resolve(buildConfigOutDir, `ziyu-vite-ui.mjs`))
+
   const srcDir = path.resolve(__dirname, '../src/')
 
   fs.readdirSync(srcDir)

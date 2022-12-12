@@ -4,6 +4,7 @@
 *.ttf
 Dockerfile
 
+*.d.ts.hbs
 .vscode
 .husky
 node_modules

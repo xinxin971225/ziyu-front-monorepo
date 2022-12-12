@@ -10,7 +10,7 @@
   "keywords": [],
   "main": "./dist/ziyu-vite-ui.umd.js",
   "module": "./dist/ziyu-vite-ui.mjs",
-  "types": "./dist//types/entry.d.ts",
+  "types": "ziyu-vite-ui.d.ts",
   "exports": {
     ".": {
       "import": "./dist/ziyu-vite-ui.mjs",
