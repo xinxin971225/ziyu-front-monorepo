@@ -19,9 +19,18 @@ const buildAll = async () => {
 
   const packageJson = JSON.parse(JSON.stringify(oldPackageJson))
   // 复制 Package.json 文件
-  // packageJson.main = 'ziyu-vite-ui.umd.js'
-  // packageJson.module = 'ziyu-vite-ui.esm.js'
+  packageJson.main = 'ziyu-vite-ui.umd.js'
+  packageJson.module = 'ziyu-vite-ui.mjs'
   packageJson.types = 'ziyu-vite-ui.d.ts'
+
+  packageJson.exports = {
+    '.': {
+      import: './ziyu-vite-ui.mjs',
+      require: './ziyu-vite-ui.umd.js',
+    },
+    './dist/style.css': './style.css',
+  }
+
   fs.outputFile(
     path.resolve(buildConfigOutDir, `package.json`),
     JSON.stringify(packageJson, null, 2),

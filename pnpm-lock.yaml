@@ -131,9 +131,6 @@ importers:
       vite: 3.2.4_terser@5.15.1
       vite-plugin-dts: 1.7.1_vite@3.2.4
 
-  packages/ziyu-vite-ui/assets/button:
-    specifiers: {}
-
   packages/ziyu-vite-ui/dist:
     specifiers:
       '@rollup/plugin-commonjs': ^23.0.2
@@ -1758,7 +1755,7 @@ packages:
       '@unocss/scope': 0.46.5
       '@unocss/transformer-directives': 0.46.5
       magic-string: 0.26.7
-      vite: 3.2.4_@types+node@18.11.9
+      vite: 3.2.4
     transitivePeerDependencies:
       - rollup
     dev: true
