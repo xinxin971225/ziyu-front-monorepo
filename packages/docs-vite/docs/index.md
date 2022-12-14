@@ -3,32 +3,32 @@ layout: home
 
 hero:
   name: ZiYu-VITE-Ui
-  text: Unit Testing with Vitest EsLint + Prettier CI/CD
+  text: vite-vitepress 趣学
   tagline: 一个 Mini 版本的组件库，基于 vite，仅供学习参考.
   image:
     src: /catdidi.png
     alt: VitePress
   actions:
     - theme: brand
-      text: Get Started
-      link: /guide/what-is-vitepress
+      text: 开始
+      link: /guide/index
     - theme: alt
       text: View on GitHub
-      link: https://github.com/vuejs/vitepress
+      link: https://github.com/xinxin971225/ziyu-front-monorepo
+
+features:
+  - icon: ⚡️
+    title: Unit Testing with Vitest
+    details: Lorem ipsum...
+  - icon: 🖖
+    title: EsLint + Prettier
+    details: Lorem ipsum...
+  - icon: 🛠️
+    title: CI/CD
+    details: Lorem ipsum...
 ---
 
-# ZiYu-VITE-Ui
-
-一个 Mini 版本的组件库，基于 vite，仅供学习参考
-
-## Features
-
----
-
-- Unit Testing with Vitest
-- EsLint + Prettier
-- CI/CD
-
+<!--
 ## Button 按钮
 
 <div style="margin-bottom:20px;">
@@ -37,4 +37,4 @@ hero:
   <JSXButton color="gray">灰色按钮</JSXButton>
   <JSXButton color="yellow">黄色按钮</JSXButton>
   <JSXButton color="red">红色按钮</JSXButton>
-</div>
+</div> -->

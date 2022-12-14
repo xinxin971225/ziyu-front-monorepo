@@ -6,20 +6,30 @@
  */
 
 import { defineConfig } from 'vitepress'
-// const sidebar = {
-//   '/': [
-//     { text: '快速开始', items: [{ text: '简介', link: '/' }] },
-//     {
-//       text: '通用',
-//       items: [{ text: 'Button 按钮', link: '/components/button' }],
-//     },
-//     { text: '导航', items: [] },
-//     { text: '反馈', items: [] },
-//     { text: '数据录入', items: [] },
-//     { text: '数据展示', items: [] },
-//     { text: '布局', items: [] },
-//   ],
-// }
+const sidebar = {
+  '/guide/': [
+    { text: '快速开始', items: [{ text: '简介', link: '/' }] },
+    {
+      text: '通用',
+      items: [{ text: 'Button 按钮', link: '/components/button' }],
+    },
+    { text: '导航', items: [] },
+    { text: '反馈', items: [] },
+    { text: '数据录入', items: [] },
+    { text: '数据展示', items: [] },
+    { text: '布局', items: [] },
+  ],
+  '/components/': [
+    {
+      text: '通用',
+      items: [{ text: 'Button 按钮', link: '/components/button' }],
+    },
+    { text: '导航', items: [] },
+    { text: '数据录入', items: [] },
+    { text: '数据展示', items: [] },
+    { text: '布局', items: [] },
+  ],
+}
 
 export default defineConfig({
   title: 'ZiYu-Vite-UI',
@@ -27,7 +37,32 @@ export default defineConfig({
     logo: '/catdidi.png',
     siteTitle: 'ZiYu-Vite-UI',
     socialLinks: [{ icon: 'github', link: 'https://github.com/xinxin971225/ziyu-front-monorepo' }],
-    // sidebar,
+    nav: [
+      {
+        text: '指引',
+        link: '/guide/index',
+        activeMatch: '/guide/',
+      },
+      {
+        text: '组件',
+        link: '/components/button',
+        activeMatch: '/components/',
+      },
+      {
+        text: '相关链接',
+        items: [
+          {
+            text: 'vitejs',
+            link: 'https://vitejs.dev/',
+          },
+          {
+            text: 'vue3',
+            link: 'https://vuejs.org/',
+          },
+        ],
+      },
+    ],
+    sidebar,
   },
   markdown: {
     config: (md: any) => {
